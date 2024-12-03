@@ -1,0 +1,1 @@
+tr -d '\n' < input | grep -Po "(^|do\(\)).*?(don't\(\)|$)" | grep -Po "mul\(\d{1,3},\d{1,3}\)" | awk -F '[(),]' '{s += $2 * $3} END {print s}'

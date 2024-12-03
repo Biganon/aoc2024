@@ -1,0 +1,1 @@
+grep -Po "mul\(\d{1,3},\d{1,3}\)" input | awk -F '[(),]' '{s += $2 * $3} END {print s}'
